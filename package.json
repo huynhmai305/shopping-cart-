@@ -5,11 +5,49 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "build-start": "next build && next start --port 3000",
+    "start": "NODE_ENV=production nodemon server.js -p $PORT",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
+    "lint-fix": "yarn lint --fix"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1",
+    "babel-eslint": "^10.1.0",
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.20",
     "next": "9.5.5",
+    "next-redux-wrapper": "^6.0.2",
+    "pg": "^8.4.1",
+    "pg-hstore": "^2.3.3",
     "react": "16.14.0",
-    "react-dom": "16.14.0"
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "16.14.0",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-saga": "^1.1.3",
+    "sass": "^1.27.0",
+    "sequelize": "^6.3.5",
+    "sweetalert2": "^10.6.1",
+    "typescript-fsa": "^3.0.0",
+    "validator": "^13.1.17",
+    "webpack": "^5.1.3"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.10",
+    "@types/react": "^16.9.53",
+    "@types/react-redux": "^7.1.9",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.13.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3"
   }
 }
